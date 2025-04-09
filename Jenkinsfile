@@ -24,6 +24,9 @@ pipeline {
             steps{
                 
                 echo 'Test Stage'
+                sh '''
+                    test -f '/workspaces/learn-jenkins-app/public/index.html'
+                '''
                 
             }
         }
